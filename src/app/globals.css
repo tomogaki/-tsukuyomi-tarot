@@ -1,0 +1,70 @@
+:root{--navy:#101c33;--navy2:#1a2a4a;--ivory:#f7f1e3;--paper:#fdfaf2;--gold:#b9974f;--gold-light:#d9b96a;--champagne:#e8cf8a;--ink:#2b2b2b;--line:#e3d9c2}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Hiragino Mincho ProN","Yu Mincho","Shippori Mincho",serif;background:var(--ivory);color:var(--ink);font-size:16px;line-height:1.8}
+a{color:var(--navy);text-decoration:none}
+.header{background:linear-gradient(180deg,var(--navy2),var(--navy));color:#fff;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;position:sticky;top:0;z-index:30;flex-wrap:wrap}
+.header nav{display:flex;gap:6px}
+.header nav a{color:#f3ead2;padding:8px 12px;border-radius:999px;font-size:14px}
+.header nav a:hover{background:rgba(255,255,255,.12)}
+.wordmark{display:inline-flex;align-items:center;gap:8px}
+.wordmark-moon{filter:drop-shadow(0 0 5px rgba(232,207,138,.8))}
+.wordmark-text{font-size:18px;letter-spacing:.14em;background:linear-gradient(90deg,#fdfaf2,#e8cf8a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.container{max-width:780px;margin:0 auto;padding:20px 16px 64px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:16px}
+.btn{display:inline-block;background:linear-gradient(180deg,#c9a85c,#a9853e);color:#fff;padding:14px 24px;border-radius:999px;border:none;font-size:16px;cursor:pointer;text-align:center;font-family:inherit}
+.btn-navy{background:linear-gradient(180deg,var(--navy2),var(--navy));color:#f3ead2;border:1px solid var(--gold)}
+.btn-outline{background:#fff;color:var(--navy);border:1px solid var(--gold)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.input,select.input,textarea.input{width:100%;padding:13px;border:1px solid #d8cba6;border-radius:10px;font-size:16px;margin:6px 0 14px;background:var(--paper);font-family:inherit}
+.input:focus{outline:none;box-shadow:0 0 0 3px rgba(217,185,106,.35)}
+.footer{background:linear-gradient(180deg,var(--navy2),var(--navy));color:#cfd6e4;text-align:center;padding:28px 16px 40px;font-size:13px}
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;border:1px solid var(--gold);color:#7a5f22;background:#fbf4de;margin:2px}
+.hero{background:radial-gradient(ellipse at top,#24365e,var(--navy) 65%);color:#f7f1e3;border-radius:18px;padding:44px 22px;text-align:center;margin-bottom:20px;position:relative;overflow:hidden}
+.hero h1{font-size:30px;line-height:1.5;margin:10px 0;color:#fdfaf2}
+.hero .shoulder{color:var(--champagne);letter-spacing:.3em}
+.feature-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:640px){.feature-grid{grid-template-columns:repeat(3,1fr)}}
+.pass-notice{border:2px solid var(--gold);background:#fff8e6;border-radius:10px;padding:12px 14px;font-size:14px;margin:8px 0 14px}
+/* 募集カード（タロットカード風） */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.tab{padding:8px 16px;border-radius:999px;border:1px solid var(--gold);background:#fff;cursor:pointer;font-family:inherit}
+.tab.active{background:var(--navy);color:#f3ead2}
+.tarot-card{background:linear-gradient(160deg,#1d2f52,#0d1830);color:#f7f1e3;border-radius:16px;padding:6px;margin-bottom:18px}
+.tarot-inner{border:1px double var(--gold);outline:1px solid rgba(217,185,106,.5);outline-offset:-7px;border-radius:12px;padding:22px 18px;position:relative}
+.tarot-inner::before,.tarot-inner::after{content:"✦";position:absolute;color:var(--gold-light);font-size:12px}
+.tarot-inner::before{top:8px;left:10px}.tarot-inner::after{bottom:8px;right:10px}
+.tarot-title{font-size:19px;color:var(--champagne);line-height:1.6;margin:8px 0}
+.info-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.info-box{border:1px solid rgba(217,185,106,.6);border-radius:10px;padding:8px;text-align:center;font-size:13px}
+.info-box strong{display:block;font-size:16px;color:#fff}
+/* 招待状風フレーム */
+.invite{background:#fff;border:1px solid var(--gold);outline:3px double rgba(185,151,79,.45);outline-offset:-8px;border-radius:6px;padding:26px 20px;margin-bottom:18px}
+.invite h2{color:var(--navy);margin-top:0}
+/* 鑑定書（魔導書風） */
+.reading-doc{background:linear-gradient(180deg,#0a1326,#101c33);border-radius:14px;padding:8px;color:#f7f1e3}
+.reading-frame{border:1px solid var(--gold);outline:3px double rgba(217,185,106,.4);outline-offset:-7px;border-radius:8px;padding:26px 18px}
+.reading-kicker{text-align:center;color:var(--champagne);letter-spacing:.3em}
+.reading-title{text-align:center;color:#fdfaf2;font-size:26px;margin:4px 0}
+.reading-sub{text-align:center;color:#b9c2d6}
+.reading-pos{border-top:1px solid rgba(217,185,106,.35);padding:16px 0}
+.reading-pos-head{display:flex;gap:10px;align-items:center;margin:0}
+.moon-badge{position:relative;width:44px;height:44px;flex-shrink:0;filter:drop-shadow(0 0 6px rgba(232,207,138,.55))}
+.moon-badge-no{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--champagne);font-size:15px;padding-left:8px}
+.reading-pos-name{display:block;font-size:17px;color:#fdfaf2}
+.reading-pos-sub{display:block;font-size:12.5px;color:#b9c2d6}
+.orient-badge{background:var(--gold);color:#101c33;border-radius:999px;padding:1px 9px;font-size:12px;margin-left:6px}
+.reading-card{color:var(--champagne);margin:8px 0 4px}
+.reading-text{white-space:pre-line;margin:4px 0}
+.reading-summary{border:1px solid rgba(217,185,106,.6);border-radius:10px;padding:16px;margin-top:18px}
+.reading-summary h3{color:var(--champagne);margin:10px 0 4px}
+.reading-summary p{white-space:pre-line;margin:4px 0}
+.reading-closing{text-align:center;margin-top:28px}
+.reading-sign{font-size:19px;color:var(--champagne)}
+.glow{text-shadow:0 0 10px rgba(232,207,138,.85),0 0 22px rgba(232,207,138,.4)}
+.glow-svg{filter:drop-shadow(0 0 7px rgba(232,207,138,.9))}
+.reading-close-line{margin:2px 0}
+.msg{max-width:85%;padding:10px 14px;border-radius:14px;margin-bottom:10px;white-space:pre-line}
+.msg.client{background:#eef2fb;margin-left:auto}
+.msg.reader{background:#fff;border:1px solid var(--line)}
+.msg.system{background:#fbf4de;font-size:13px;margin:0 auto 10px;text-align:center}
+.lock-note{background:#f3f4f6;border-radius:10px;padding:12px;font-size:14px;text-align:center}
